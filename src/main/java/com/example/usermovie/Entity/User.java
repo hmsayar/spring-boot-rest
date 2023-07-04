@@ -17,7 +17,6 @@ public class User {
     @Column(unique = true, nullable = false, length = 100)
     private String name;
 
-
     @OneToMany(mappedBy = "user", cascade= CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private Set<UserMovie> ratedMovies;
@@ -48,7 +47,5 @@ public class User {
     public String getName() {
         return name;
     }
-
-
 
 }
